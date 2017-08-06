@@ -23,7 +23,7 @@ def extractGradients(im):
     for i in range(0, numblocks[0]):
         for n in range(0, numblocks[0]):
             #defines the box location
-            box = [(boxsize[0] * i), (boxsize[1] * n), (boxsize[0] * (i + 1) + 1), (boxsize[1] * (n + 1)) + 1]
+            box = [(boxsize[0] * i), (boxsize[1] * n), (boxsize[0] * (i + 1)), (boxsize[1] * (n + 1))]
             #defines the vertical and horizontal components of the gradient vector by finding the mean of the
             #gradients at every point in a 16x16 square
             vertw=np.mean(dy[box[0]:box[2], box[1]:box[3]])
